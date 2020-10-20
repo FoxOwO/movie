@@ -1,0 +1,24 @@
+<div class="row" *ngIf="movie">
+  <div class="col s12 m7">
+    <div class="card">
+      <div class="card-image"><img [src]="movie.poster"> <span class="card-title">{{movie.title}}</span></div>
+      <div class="card-content grey-text text-darken-4">
+        <div class="row">
+          <span class="col s6">Plot</span>
+          <span class="col s6">{{movie.plot}}</span>
+        </div>
+        <div class="row">
+          <span class="col s6">Runtime</span>
+          <span class="col s6">{{movie.runtime}}</span>
+        </div>
+
+        <div class="row">
+          <span class="col s6">Rating</span>
+          <span class="col s6">{{movie.rating}}</span>
+        </div>
+      </div>
+      <div class="card-action"><a class="btn" [routerLink]="['/movies']">Go Back</a></div>
+      <div class="card-action"><i class="fas fa-trash-alt" (click)="deleteMovie(movie)"></i></div>
+    </div>
+  </div>
+</div>
